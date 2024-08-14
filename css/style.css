@@ -1,0 +1,675 @@
+html,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  background-color: white;
+  line-height: 1.6;
+  font-family: Montserrat-Regural;
+}
+
+p {
+  line-height: 30px;
+  font-family: Montserrat-Regural;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: ITC-Garde-Bold;
+  src: url("../font/ITCAvantGardeStd-Bold.ttf");
+}
+@font-face {
+  font-family: ITC-GardePro-Bold;
+  src: url("../font/ITCAvantGardePro-Md.woff");
+}
+@font-face {
+  font-family: Montserrat-Light;
+  src: url("../font/Montserrat-Light.woff2");
+}
+@font-face {
+  font-family: Montserrat-Regural;
+  src: url("../font/Montserrat-Regular.woff2");
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../font/Montserrat-Medium.woff2");
+}
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url("../font/Montserrat-SemiBold.woff2");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../font/Montserrat-Bold.woff2");
+}
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url("../font/Montserrat-ExtraBold.woff2");
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #292929;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0047c4;
+  /* outline: 1px solid slategrey; */
+  border-radius: 12px;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+}
+.top-nav {
+  background-color: #292929;
+  width: 68%;
+  clip-path: polygon(0 0, 102% 0%, 103% 100%, 3% 100%);
+}
+.navButton a {
+  font-family: Montserrat-Bold;
+}
+.LiveBTN {
+  background-color: #006613;
+  font-family: ITC-GardePro-Bold;
+  text-transform: uppercase;
+}
+.hero-section .LiveBTN {
+  padding: 11px 24px;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+.nav-item .btn {
+  padding: 12px 24px;
+  transition: all 0.2s ease-in-out;
+  font-size: 14px;
+}
+.LiveBTN:hover {
+  background-color: #292929;
+  color: white;
+}
+.OrderBTN {
+  background-color: #0047c4;
+  font-family: ITC-GardePro-Bold;
+  text-transform: uppercase;
+}
+.OrderBTN:hover {
+  background-color: #006613;
+}
+.parent-icons {
+  padding: 10px 0 10px 30px;
+  gap: 50px;
+}
+.top-nav .nav-left {
+  padding: 10px 0;
+}
+.top-icons a span {
+  font-size: 14px;
+  color: #858181;
+}
+.top-icons i:hover .top-icons a span:hover {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+.top-icons i:hover {
+  background-color: #06891e;
+  color: white;
+}
+.top-icons i {
+  background-color: white;
+  padding: 5px 6px;
+  border-radius: 100%;
+  color: black;
+}
+.top-icons a {
+  color: white;
+}
+
+.navbar {
+  background-color: white;
+  /* padding: 15px; */
+}
+
+.navbar-brand img {
+  width: 85%;
+  margin-top: -25px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.nav-link a {
+  font-family: Montserrat-Regural;
+}
+
+.navbar-nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: #000;
+}
+.navbar-nav .dropdown-content a {
+  color: #000;
+  padding: 8px 0;
+  display: block;
+}
+.navbar-nav .dropdown-content a:hover {
+  color: #06891e;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-nav .nav-link:hover {
+  color: green;
+}
+
+.navbar-nav .btn {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.hero-section {
+  /* background-color: #004aad; */
+  background-image: url("../img/banner.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 79vh;
+  color: white;
+  padding: 10rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: ITC-GardePro-Bold;
+  letter-spacing: 5px;
+}
+.hero-section p {
+  padding: 1rem 0;
+}
+
+.toFooter {
+  position: absolute;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0;
+}
+
+.leave {
+  position: absolute;
+  right: 525px;
+  top: 128px;
+}
+
+/* .price-section  */
+
+.price-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.price-section h2 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 50px;
+  font-weight: 900;
+  color: black;
+}
+
+.price-card {
+  border-radius: 25px !important;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.cards-bg {
+  background-color: #464646;
+  border-radius: 25px 25px 0 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.price-card h4 {
+  font-weight: bold;
+  padding: 8px 0;
+  font-size: 18px;
+  color: white;
+  
+}
+
+.price-card h3 {
+  color: #464646;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'ITC-GardePro-Bold';
+  letter-spacing: 1px;
+  font-size: 40px;
+}
+.price-section p {
+   font-family: Montserrat-Regural;
+   color: #222222;
+   font-weight: 600;
+}
+
+.price-card h3:hover,.price-card,.cards-bg{
+  color: #006613;
+}
+.price-card:hover {
+  border-radius: 0 0 25px 25px !important;
+  border-bottom: 4px solid #006613 !important;
+}
+
+.price_BTN a {
+  padding: 12px 24px;
+  border: none;
+}
+.price_BTN a:hover{
+  color: white;
+}
+
+.cards-bg:hover{
+  background-color: #006613;
+  color: white;
+  }
+
+.card-body {
+  padding: 0;
+  padding: 0;
+  border-left: 1px solid #0047c4;
+  border-right: 1px solid #0047c4;
+  border-radius: 25px;
+  border-bottom: 4px solid #0047c4;
+
+}
+.card-title {
+  margin: 0;
+}
+.form-bg {
+  background-color: #0047c4;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  border-radius: 25px 25px 0px 0px;
+}
+.form-bg h6 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 30px;
+  font-weight: 900;
+  padding: 10px 0;
+  letter-spacing: 2px;
+}
+.card {
+  width: 90%;
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  height: auto;
+}
+label.radio {
+  cursor: pointer;
+  width: 100%;
+}
+label.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+label.radio span {
+  padding: 7px 14px;
+  border: 2px solid #eee;
+  display: inline-block;
+  color: #039be5;
+  border-radius: 10px;
+  width: 100%;
+  height: 48px;
+  line-height: 27px;
+}
+label.radio input:checked + span {
+  border-color: #039be5;
+  background-color: #81d4fa;
+  color: #fff;
+  border-radius: 9px;
+  height: 48px;
+  line-height: 27px;
+}
+.form-control {
+  margin-top: 10px;
+  height: 48px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin: 6px auto;
+}
+.form-control {
+  width: 90%;
+}
+::-webkit-input-placeholder{
+  color: black;
+}
+.dropdown-toggle {
+  width: 90%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: White;
+  color: #000;
+  font-family: Montserrat-Medium;
+  text-transform: uppercase;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+    padding: 12px 15px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #222222 !important;
+}
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  color: unset;
+  background-color: unset;
+  border-color: var(--bs-btn-active-border-color);
+}
+.dropdown-toggle:hover{
+  background-color: unset;
+  color: unset;
+}
+.input-group  {
+  width: 90% ;
+  margin: 0 auto;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #039be5;
+}
+.agree-text {
+  font-size: 12px;
+}
+.priceUSD a {
+  color: #222222;
+  font-family: Montserrat-Medium;
+  font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.terms {
+  font-size: 12px;
+  text-decoration: none;
+  color: #039be5;
+}
+.confirm-button {
+  height: auto;
+  border-radius: 5px;
+  width: 90%;
+  background-color: #006613;
+  border: none;
+}
+
+.quote-section {
+  background-color: #004aad;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.quote-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.parent-why-sec {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.why-us-section {
+  padding: 5rem 0;
+  background-image: url("../img/why-us.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.parent-why-sec {
+  background-image: url(../img/why-us2.png);
+  background-size: cover;
+  height: 110vh;
+  overflow: hidden;
+  margin-top: -20rem;
+}
+
+.why-us-section h2 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 50px;
+  font-weight: 900;
+  color: black;
+  text-align: center;
+}
+.why-top p{
+  font-family: Montserrat-Regural;
+  color: #222222;
+  font-weight: 600;
+}
+.icon-box {
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #d2d5d7;
+  border-radius: 25px;
+  padding: 25px 0;
+  height: 185px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.icon-box p {
+  line-height: 30px;
+    font-family: Montserrat-Regural;
+    font-weight: 600;
+    font-size: 19px;
+}
+.icon-box:hover{
+  background-color: white;
+  border-radius: 25px 25px !important;
+  border-bottom: 4px solid #006613 !important;
+}
+.icon-box h4 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 35px;
+  font-weight: 900;
+  color: black;
+  text-transform: uppercase;
+  padding: 15px 0 0 0;
+}
+.icon-box img {
+  width: 55px;
+}
+
+
+.how-it-works-section {
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.how-it-works-section h2 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 50px;
+  font-weight: 900;
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+}
+.how-it-works-section p {
+  font-family: Montserrat-Regural;
+    color: #222222;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.work-content h4 {
+  font-family: ITC-GardePro-Bold;
+  font-size: 25px;
+  font-weight: 900;
+  color: black;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.client-reviews-section {
+  padding: 40px 0;
+}
+
+.client-reviews-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.client-reviews-section .client-review {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.client-reviews-section .client-review img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.client-reviews-section .client-review p {
+  font-style: italic;
+}
+
+.footer-section {
+  background-color: #004aad;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
