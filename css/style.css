@@ -352,6 +352,16 @@ i.fa-facebook {
   justify-content: center;
   align-items: center;
 }
+.our-blogs{
+  background-image: url(../img/our-banner.png);
+  height: auto;
+  background-size: cover;
+  padding: 11rem 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .blog-content p {
   font-weight: 500 !important;
 }
@@ -1005,6 +1015,34 @@ label.radio input:checked + span {
   font-style: unset !important;
 }
 
+.blogs-card .card-content {
+  border: 1px solid #d2d5d7;
+}
+.card-content h3{
+  font-family: "ITC-Garde-Bold";
+  padding: 8px 0;
+}
+.card-content .card-p{
+  font-family: 'ITC-GardePro-Bold';
+  color: gray;
+}
+.card-content {
+  transition: all 0.2s ease-in-out;
+}
+.card-content a {
+  color: #000;
+}
+.card-content:hover a {
+  color: white;
+}
+.card-content:hover {
+  background-color: #006613;
+  color: white;
+  
+}
+.card-content:hover .card-p {
+  color: white;
+}
 footer {
   background-color: #101010;
 }
