@@ -166,7 +166,7 @@ header {
 .LiveBTN {
   background-color: #006613;
   font-family: ITC-GardePro-Bold;
-  text-transform: uppercase;
+  
 }
 .hero-section .LiveBTN {
   padding: 11px 24px;
@@ -185,7 +185,6 @@ header {
 .OrderBTN {
   background-color: #0047c4;
   font-family: ITC-GardePro-Bold;
-  text-transform: uppercase;
 }
 .parent-icons i {
   color: #006613 !important;
@@ -364,6 +363,16 @@ i.fa-facebook {
 }
 .contact-banner {
   background-image: url("../img/contact-banner.png");
+  padding: 16rem 0;
+  height: auto;
+}
+.revision-banner {
+  background-image: url("../img/revision-banner.png");
+  padding: 16rem 0;
+  height: auto;
+}
+.term-banner {
+  background-image: url("../img/terms-banner.png");
   padding: 16rem 0;
   height: auto;
 }
@@ -1101,6 +1110,18 @@ label.radio input:checked + span {
    height: 100px;
    display: block;
 }
+
+.work-content ul li {
+  list-style: disc;
+}
+
+.dis-content h4 {
+  font-family: ITC-Garde-Bold;
+  font-size: 30px;
+}
+.dis-content ul li {
+  list-style: disc;
+}
 footer {
   background-color: #101010;
 }
@@ -1257,6 +1278,9 @@ footer i.unfb {
   .banner-2 {
     padding: 11rem 0;
   }
+  .term-banner h1 {
+    margin-top: -5rem;
+  }
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .parent-icons {
@@ -1320,6 +1344,9 @@ footer i.unfb {
   }
   .banner-2 {
     padding: 9rem 0;
+  }
+  .term-banner h1 {
+    margin-top: -5rem;
   }
 }
 
@@ -1412,6 +1439,9 @@ footer i.unfb {
     left: 48%;
     bottom: 21px;
   }
+  .term-banner h1 {
+    margin-top: -5rem;
+  }
 }
 @media screen and (min-width: 991px) and (max-width: 1024px) {
   .icon-box {
@@ -1429,6 +1459,16 @@ footer i.unfb {
   }
   .hero-section {
     height: auto;
+    background-size: inherit;
+  }
+  .term-banner {
+    background-size: inherit;
+  }
+  .revision-banner {
+    padding:16rem 0 !important;
+  }
+  .how-it-works-section h2 {
+    font-size: 30px;
   }
   .sec-contact-form .col-xxl-4 {
     padding-top: 20px ;
@@ -1570,6 +1610,15 @@ footer i.unfb {
   }
   .sec-contact-form .col-xxl-4 {
     padding-top: 20px ;
+  }
+  .how-it-works-section h2 {
+    font-size: 30px;
+  }
+  .dis-content h4 {
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 35px;
   }
   .parent-icons {
     gap: 6px;
