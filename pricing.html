@@ -21,7 +21,79 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
+<style>
+    /* table css  */
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  font-family: 'Montserrat-Bold';
+  text-align: center;
+}
+
+thead {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e9f1ff;
+}
+.pricing-heading:hover {
+    background-color: unset;
+}
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    th, td {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th, td {
+                text-align: left;
+            }
+            thead tr {
+                display: block;
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            td {
+                text-align: left;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+/* table css  */
+</style>
   <body>
     <!-- Header & Navigation -->
     <header>
@@ -170,10 +242,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section banner-2">
+    <section class="hero-section pricing-banner">
       <div class="container">
         <h1>
-          About Us
+            Pricing
           <img src="./img/leave.png" alt="" /><br />
         </h1>
 
@@ -186,79 +258,135 @@
       </div>
     </section>
 
-    <section class="how-it-works-section ">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-12 col-xxl-6 col-xl-6 col-lg-6">
-            <div class="work-img">
-              <img src="./img/story-girl.png" alt="" class="w-100" />
-            </div>
-          </div>
-          <div class="col-md-12 col-xxl-6 col-xl-6 col-lg-6">
-            <div class="work-content">
-              <h2 class="story-heading">Our Story</h2>
-              <p class="work-main-pera">
-                You can trust us to make your experience smooth and stress-free.
-                We care deeply about our students, ensuring each step is easy
-                and according to your needs. Get started with just a few simple
-                steps, and let us handle the rest with care and expertise.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum,
-                accusantium? Tempora inventore saepe debitis qui sunt,
-                exercitationem pariatur quod quas ipsum dicta quidem repudiandae
-                unde soluta voluptatum, alias culpa itaque?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
-                non cumque dicta deleniti tempore maxime iusto aperiam, quod
-                pariatur odit atque doloremque reiciendis fuga ipsam ad quaerat
-                neque assumenda quia! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Numquam odio placeat praesentium vero, sequi,
-                doloribus dicta, laudantium repellat amet debitis similique
-                aliquam ratione? Blanditiis laborum facere, quis repellat quod
-                modi?
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row align-items-center pt-5">
-          <div class="col-md-12 col-xxl-6 col-xl-6 col-lg-6">
-            <div class="work-img">
-              <img src="./img/story-img2.png" alt="" class="w-100" />
-            </div>
-          </div>
-          <div class="col-md-12 col-xxl-6 col-xl-6 col-lg-6">
-            <div class="work-img">
-              <img src="./img/story-img3.png" alt="" class="w-100" />
-            </div>
-          </div>
-          <div class="col-md-12 col-xxl-12 col-xl-12 col-lg-12">
-            <div class="py-5">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-                sequi optio hic ut consectetur quasi veritatis labore sunt cum
-                culpa mollitia, eos perspiciatis adipisci dicta corrupti qui
-                nesciunt vitae et?Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Veritatis pariatur velit perspiciatis porro!
-                Dolor dolores eveniet nobis voluptas numquam, blanditiis est
-                natus excepturi sunt ratione mollitia aliquid ab laudantium
-                veniam. Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Recusandae rerum at culpa voluptate, ducimus praesentium
-                sunt, earum sed voluptatem doloribus eos magni quod rem ullam
-                facilis maiores accusantium necessitatibus fuga.
-              </p>
-            </div>
+    <section class="sec-pricing pb-5">
+        <div class="container">
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr class="pricing-heading">
+                        <th class="py-4">No. of Days</th>
+                        <th>College</th>
+                        <th>Undergraduate</th>
+                        <th>Masters</th>
+                        <th>PHD</th>
+                        <th>Admission Essay</th>
+                        <th>CIPD Assignment Writing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-4" id="Days">20 Days +</td>
+                        <td>40 AED</td>
+                        <td>50 AED</td>
+                        <td>60 AED</td>
+                        <td>70 AED</td>
+                        <td>80 AED</td>
+                        <td>60 AED</td>
+                    </tr>
+                    <tr>
+                        <td>15 Days</td>
+                        <td>45 AED</td>
+                        <td>55 AED</td>
+                        <td>65 AED</td>
+                        <td>75 AED</td>
+                        <td>85 AED</td>
+                        <td>65 AED</td>
+                    </tr>
+                    <tr >
+                        <td class="py-4">10 Days</td>
+                        <td>50 AED</td>
+                        <td>60 AED</td>
+                        <td>70 AED</td>
+                        <td>80 AED</td>
+                        <td>90 AED</td>
+                        <td>70 AED</td>
+                    </tr>
+                    <tr>
+                        <td>7 Days</td>
+                        <td>55 AED</td>
+                        <td>65 AED</td>
+                        <td>75 AED</td>
+                        <td>85 AED</td>
+                        <td>100 AED</td>
+                        <td>75 AED</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4">6 Days</td>
+                        <td>60 AED</td>
+                        <td>70 AED</td>
+                        <td>80 AED</td>
+                        <td>90 AED</td>
+                        <td>105 AED</td>
+                        <td>80 AED</td>
+                    </tr>
+                    <tr>
+                        <td>5 Days</td>
+                        <td>65 AED</td>
+                        <td>75 AED</td>
+                        <td>85 AED</td>
+                        <td>100 AED</td>
+                        <td>110 AED</td>
+                        <td>85 AED</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4">4 Days</td>
+                        <td>70 AED</td>
+                        <td>80 AED</td>
+                        <td>90 AED</td>
+                        <td>105 AED</td>
+                        <td>115 AED</td>
+                        <td>90 AED</td>
+                    </tr>
+                    <tr>
+                        <td>3 Days</td>
+                        <td>75 AED</td>
+                        <td>85 AED</td>
+                        <td>100 AED</td>
+                        <td>110 AED</td>
+                        <td>120 AED</td>
+                        <td>100 AED</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4">2 Days</td>
+                        <td>80 AED</td>
+                        <td>90 AED</td>
+                        <td>105 AED</td>
+                        <td>115 AED</td>
+                        <td>125 AED</td>
+                        <td>105 AED</td>
+                    </tr>
+                    <tr>
+                        <td>12 Hours</td>
+                        <td>85 AED</td>
+                        <td>100 AED</td>
+                        <td>110 AED</td>
+                        <td>120 AED</td>
+                        <td>130 AED</td>
+                        <td>110 AED</td>
+                    </tr>
+                    <tr>
+                        <td class="py-4">6 Hours</td>
+                        <td>90 AED</td>
+                        <td>105 AED</td>
+                        <td>115 AED</td>
+                        <td>125 AED</td>
+                        <td>135 AED</td>
+                        <td>115 AED</td>
+                    </tr>
+                </tbody>
+            </table>
             <div
-              class="d-flex justify-content-xxl-start justify-content-xl-start justify-content-lg-start justify-content-md-center justify-content-sm-center  gap-4 price_BTN"
+              class="d-flex justify-content-center py-4 gap-4 price_BTN"
             >
-              <a href="#" class="btn OrderBTN btn-outline-light btn-success">Live Chat</a>
-              <a href="#" class="btn LiveBTN btn-primary">Order Now</a>
+            <a href="#" class="btn OrderBTN btn-primary">Order Now</a>
+              <a href="#" class="btn  LiveBTN btn-outline-light btn-success">Live Chat</a>
             </div>
-          </div>
         </div>
-      </div>
     </section>
+
+
+
+    
+
 
     <!-- Footer -->
     <footer id="footer">
