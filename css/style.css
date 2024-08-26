@@ -102,7 +102,9 @@ a {
 li {
   list-style: none;
 }
-
+strong {
+  font-family: 'Montserrat-Medium';
+}
 @font-face {
   font-family: ITC-Garde-Bold;
   src: url("../font/ITCAvantGardeStd-Bold.ttf");
@@ -265,7 +267,15 @@ i.fa-facebook {
   background-color: white;
   /* padding: 15px; */
 }
-
+.dropdown-content option {
+  font-family: 'Montserrat-Regural';
+  font-weight: 700;
+  /* color: white; */
+}
+.navunique {
+  z-index: 2;
+  position: relative;
+}
 .navbar-brand img {
   width: 85%;
   margin-top: -25px;
@@ -299,10 +309,19 @@ i.fa-facebook {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
-  color: #000;
+  color: white;
+  background-image: url(../img/banner.png);
+  /* backdrop-filter: blur(0px); */
+  /* opacity: 128; */
+  border-radius: 5px;
+  width: 720px;
+  /* margin-top: 14px; */
+}
+.navDrop {
+  padding: 20px 0;
 }
 .navbar-nav .dropdown-content a {
-  color: #000;
+  color: white;
   padding: 8px 0;
   display: block;
 }
@@ -386,7 +405,36 @@ i.fa-facebook {
   padding: 16rem 0;
   height: auto;
 }
-
+.sec-service {
+  padding-bottom: 3rem;
+  margin-top: -100px;
+}
+.sec-service .row .col-xxl-6 {
+  display: flex;
+  justify-content: center;
+}
+.service-heading {
+  margin-bottom: 100px;
+}
+.service-content h3 {
+  font-size: 40px;
+  font-family: 'ITC-Garde-Bold';
+}
+.main-content h4 {
+  font-size: 28px;
+  font-family: 'ITC-Garde-Bold';
+}
+.main-content ul p {
+  font-family: 'ITC-GardePro-Bold';
+  padding: 8px 0;
+}
+.main-content ul li {
+ list-style: disc;
+}
+.hero-section .service-heading  > img {
+  margin-top: -25px;
+  width: 45px;
+}
 .blog-content p {
   font-weight: 500 !important;
 }
@@ -1044,6 +1092,7 @@ label.radio input:checked + span {
 
 .blogs-card .card-content {
   border: 1px solid #d2d5d7;
+  margin: 1rem 0;
 }
 .card-content h3{
   font-family: "ITC-Garde-Bold";
@@ -1084,7 +1133,7 @@ label.radio input:checked + span {
   /* font-size: 14px; */
   width: 100%;
   font-family: Montserrat-Medium;
-  padding-inline: 60px;
+  padding-left: 75px;
 }
 .sec-contact-form .OrderBTN {
   padding: 12px 0;
@@ -1112,7 +1161,7 @@ label.radio input:checked + span {
   border-right: 1px solid #d2d5d7;
   font-size: 20px;
   padding: 15px;
-  margin-right: -46px;
+  margin-right: -68px;
   position: relative;
   color: #646464;
   /* clip-path: polygon(0 6%, 89% 6%, 90% 30%, 100% 39%, 90% 47%, 89% 75%, 0% 75%); */
@@ -1175,6 +1224,10 @@ label.radio input:checked + span {
   justify-content: space-between;
   position: relative;
   margin: 50px 0;
+  height: 425px;
+}
+.sec-testi .review-card:hover {
+  background-color: #f1f0f0;
 }
 
 .sec-testi .card-header {
@@ -1375,6 +1428,9 @@ footer i.unfb {
 .footer-bottom a:hover {
   color: #08a826;
 }
+.dropclose {
+  display: none;
+}
 @media screen and (min-width: 1600px) and (max-width: 1900px) {
   .client-reviews-section .mySwiper {
     width: 100%;
@@ -1415,6 +1471,12 @@ footer i.unfb {
   .hero-section h1 > img {
     margin-top: -25px;
     width: 45px;
+  }
+  .sec-service .card {
+    margin: 1rem 0;
+  }
+  .navbar-nav .dropdown-content {
+    width: 600px;
   }
   .hero-section {
     height: auto;
@@ -1479,7 +1541,7 @@ footer i.unfb {
   }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1199px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .parent-icons {
     gap: 6px;
   }
@@ -1490,7 +1552,9 @@ footer i.unfb {
   .navbar-brand img {
     width: 205px;
   }
-
+  .navbar-nav .dropdown-content {
+    width: 500px;
+  }
   .blog-banner {
     padding: 12rem 0;
   }
@@ -1571,8 +1635,6 @@ footer i.unfb {
   .term-banner h1 {
     margin-top: -5rem;
   }
-}
-@media screen and (min-width: 991px) and (max-width: 1199px) {
   .footer-section ul li a {
     font-size: 14px;
   }
@@ -1595,6 +1657,7 @@ footer i.unfb {
     width: 200px;
 }
 }
+
 @media screen and (min-width: 991px) and (max-width: 1024px) {
   .icon-box {
     height: 280px;
@@ -1609,9 +1672,39 @@ footer i.unfb {
     margin-top: -25px;
     width: 45px;
   }
+  .navDrop {
+    padding: 8px 0;
+  }
   .footer-section img {
     width: 300px;
-}
+  }
+  .navbar-nav {
+    align-items: start;
+  }
+  .navbar-nav .dropdown-content {
+    width: 500px;
+    /* margin-top: 14px; */
+    position: absolute;
+    top: -96px;
+    left: 112px;
+    z-index: 3;
+    }
+    .mobileRes .nav-item .btn {
+      padding: 8px 16px;
+    }
+    .mobileRes {
+      display: flex;
+      margin-left: -20px;
+    }
+  .sec-testi .review-card {
+    height: 473px;
+  }
+  .sec-service {
+    margin-top: 0;
+  }
+  .sec-service .col-xxl-6 .card {
+    margin-bottom: 4rem;
+  }
   .hero-section {
     height: auto;
     background-size: inherit;
@@ -1749,6 +1842,9 @@ footer i.unfb {
   .top-icons a span {
     font-size: 13px;
   }
+  .dropdown-content option {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
@@ -1758,6 +1854,50 @@ footer i.unfb {
   }
   .hero-section h1 {
     line-height: unset !important;
+  }
+  .sec-service .col-xxl-6 .card {
+    margin-bottom: 4rem;
+  }
+  .part-box h4 {
+    font-size: 24px;
+  }
+  .sec-testi .review-card {
+    height: auto;
+  }
+  .navbar-nav {
+    align-items: start;
+  }
+  .navbar-nav .dropdown-content {
+    width: 353px;
+    /* margin-top: 14px; */
+    position: absolute;
+    top: -79px;
+    left: 108px;
+    z-index: 3;
+  }
+  .dropdown-content option {
+    font-size: 10px;
+  }
+  .navDrop {
+    padding: 8px 0;
+  }
+    .mobileRes .nav-item .btn {
+      padding: 8px 16px;
+    }
+    .mobileRes {
+      display: flex;
+      margin-left: -20px;
+    }
+  .w-25 {
+    width: 100% !important;
+  }
+  .service-content h3 {
+    font-size: 30px;
+    text-align: center
+  }
+  .main-content h4 {
+    font-size: 24px;
+    text-align: center;
   }
   .top-nav {
     width: 100%;
@@ -1944,6 +2084,29 @@ footer i.unfb {
   .hero-section h1 > img {
     width: 40px;
   }
+  .price-card h4 {
+    font-size: 14px;
+  }
+  .dropdown-content .gap-5 {
+    gap: 0 !important;
+  }
+  li.dropdown {
+    width: 100%;
+  }
+
+  .dropclose {
+    float: inline-end;
+    font-family: 'ITC-GardePro-Bold';
+    display: block;
+  }
+  .navbar-nav .dropdown-content {
+    width: 100%;
+    /* margin-top: 14px; */
+    position: absolute;
+    top: -79px;
+    left: 0px;
+    z-index: 3;
+    }
   .mesg-icon img {
     width: 50px;
   }
